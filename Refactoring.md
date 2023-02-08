@@ -9,3 +9,9 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+1. I gave the event argument of the function a default value of false to make the code more readable.
+2. I removed the unnecessary multiple checks on the truthiness of the candidate variable. I know the candidate would always be false if the event is false, so I just return the TRIVIAL_PARTITION_KEY if the event is falsy.
+3. I used the null coalesce operator to check for the presence of a partionKey, thus removing an extra if block and reducing the code.
+4. I reduced the convoluted nested logic which can be difficult to follow and spaced out the code; leaving a blank line between each if block to make the code easier to read.
+
